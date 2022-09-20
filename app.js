@@ -13,7 +13,16 @@ app.set('view engine', 'handlebars') //如果沒設定樣板引擎，預設是pu
 app.use(express.static('public'))
 //設定相關路由
 app.get('/', (req, res) => {
-  res.send('HI I AM Rafael')
+  res.render('index')
+})
+app.get('/about', (req, res) => {
+  res.render('about')
+})
+app.get('/portfolio', (req, res) => {
+  res.render('portfolio')
+})
+app.get('/contact', (req, res) => {
+  res.render('contact')
 })
 //監聽伺服器
 app.listen(3000, () => {
