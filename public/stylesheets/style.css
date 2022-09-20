@@ -27,8 +27,8 @@ body {
 }
 
 .main-content {
-  max-width: 100%;
-  padding: 0 4%;
+  width: 95%;
+  padding: 0 5.5%;
 }
 
 .main-page {
@@ -48,9 +48,16 @@ p.title {
 
 
 .btn {
-  font-size: 2rem;
-  background-color: rgb(198, 186, 186);
+  font-size: 1.5rem;
+  background-color: rgb(220, 214, 214);
   border-radius: 5px;
-  padding: 5px 20px;
+  border: none;
+  padding: 8px 30px;
   margin-left: 10px;
+  font-weight: 500;
+}
+
+.b-black {
+  background-color: rgb(30, 26, 26);
+  color: aliceblue;
 }
