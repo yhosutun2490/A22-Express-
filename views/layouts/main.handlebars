@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Expreer基礎驗收</title>
+  <title>Express基礎驗收</title>
   <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
@@ -16,13 +16,13 @@
       </a>
       <div class="button-end">
         <a href="/about" class="about-page">
-          <button type="submit" class="btn {{clickabout}}">About</button>
+          <button type="submit" class="btn {{#if pointer.about}}b-black{{/if}}">About</button>
         </a>
         <a href="/portfolio" class="portfolio-page">
-          <button type="submit" class="btn {{clickportfolio}}">Portfolio</button>
+          <button type="submit" class="btn {{#if pointer.portfolio}}b-black{{/if}}">Portfolio</button>
         </a>
         <a href="/contact" class="contact-page">
-          <button type="submit" class="btn {{clickcontact}}">Contact</button>
+          <button type="submit" class="btn {{#if pointer.contact}}b-black{{/if}}">Contact</button>
         </a>
       </div>
 

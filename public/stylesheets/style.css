@@ -46,6 +46,11 @@ p.title {
   justify-content: space-evenly;
 }
 
+/* .button-end .btn:focus {
+  background-color: black;
+  color: aliceblue;
+} */
+
 
 .btn {
   font-size: 1.5rem;

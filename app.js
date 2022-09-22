@@ -12,20 +12,18 @@ app.set('view engine', 'handlebars') // 如果沒設定樣板引擎，預設是p
 // 建立靜態資料夾路徑
 app.use(express.static('public'))
 // 設定相關路由
-const pointer = 'b-black'
+let pointer = {}
 app.get('/', (req, res) => {
   res.render('index')
 })
-app.get('/about', (req, res) => {
-  const pointer = 'b-black'
-  res.render('about', { clickabout: pointer })
+app.get('/:page', (req, res) => {
+  if (req.params.page) {
+    pointer = {}
+    pointer[req.params.page] = 'onclick'
+    res.render(req.params.page, { pointer: pointer })
+  }
 })
-app.get('/portfolio', (req, res) => {
-  res.render('portfolio', { clickportfolio: pointer })
-})
-app.get('/contact', (req, res) => {
-  res.render('contact', { clickcontact: pointer })
-})
+
 // 監聽伺服器
 app.listen(3000, () => {
   console.log(`you are listening on ${hostname} en port ${port}`)
